@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Plan.h"
 
 extern NSArray *selectedDate;
 extern NSArray *parseSpot3;
 extern NSArray *hadSession;
 
 @interface Calendario : UIViewController
--(IBAction)nextAct:(id)sender;
--(IBAction)prevAct:(id)sender;
+- (IBAction)nextAct:(id)sender;
+- (IBAction)prevAct:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *lblMes;
 @end

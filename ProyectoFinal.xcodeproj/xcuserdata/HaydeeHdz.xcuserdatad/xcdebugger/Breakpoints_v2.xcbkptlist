@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ProyectoFinal/Requirements.m"
-            timestampString = "494369685.008315"
+            filePath = "ProyectoFinal/Calendario.m"
+            timestampString = "494379718.24084"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "-initController"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "-moreDateInfo"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

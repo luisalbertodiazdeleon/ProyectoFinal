@@ -187,7 +187,6 @@
             {
                 [self setStyle:View];
             }
-            
         }
 }
 

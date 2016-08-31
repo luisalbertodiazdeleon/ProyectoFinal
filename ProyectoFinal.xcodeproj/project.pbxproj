@@ -33,6 +33,7 @@
 		6E41F8051D776FD200EE59FD /* check.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E41F8031D776FD200EE59FD /* check.jpg */; };
 		6E41F8061D776FD200EE59FD /* uncheck.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E41F8041D776FD200EE59FD /* uncheck.jpg */; };
 		6E41F8091D777C8B00EE59FD /* Calendario.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E41F8081D777C8B00EE59FD /* Calendario.m */; };
+		6E41F8561D77A04D00EE59FD /* Plan.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E41F8551D77A04D00EE59FD /* Plan.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,8 @@
 		6E41F8041D776FD200EE59FD /* uncheck.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = uncheck.jpg; sourceTree = "<group>"; };
 		6E41F8071D777C8B00EE59FD /* Calendario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calendario.h; sourceTree = "<group>"; };
 		6E41F8081D777C8B00EE59FD /* Calendario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calendario.m; sourceTree = "<group>"; };
+		6E41F8541D77A04D00EE59FD /* Plan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plan.h; sourceTree = "<group>"; };
+		6E41F8551D77A04D00EE59FD /* Plan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plan.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 				6E41F7CE1D761CE500EE59FD /* Start.m */,
 				6E41F7F81D767DE600EE59FD /* Requirements.h */,
 				6E41F7F91D767DE600EE59FD /* Requirements.m */,
+				6E41F8541D77A04D00EE59FD /* Plan.h */,
+				6E41F8551D77A04D00EE59FD /* Plan.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				6E41F8091D777C8B00EE59FD /* Calendario.m in Sources */,
 				6E41F7FA1D767DE600EE59FD /* Requirements.m in Sources */,
 				6E41F7E51D761EF900EE59FD /* cellStart.m in Sources */,
+				6E41F8561D77A04D00EE59FD /* Plan.m in Sources */,
 				6E41F7D51D761CE500EE59FD /* ProyectoFinal.xcdatamodeld in Sources */,
 				6E41F7D41D761CE500EE59FD /* main.m in Sources */,
 				6E41F7CF1D761CE500EE59FD /* AppDelegate.m in Sources */,

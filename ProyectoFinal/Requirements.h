@@ -12,6 +12,5 @@
 
 @interface Requirements : UIViewController
 @property int row;
-@property (unsafe_unretained, nonatomic) IBOutlet UIView *vwRequirements;
 - (IBAction)btnRight_Pressed:(id)sender;
 @end

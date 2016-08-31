@@ -17,6 +17,7 @@ NSUInteger weekday;
 int thisYear;
 int weekDay;
 int thisMonth;
+NSDate *newDate;
 
 NSArray *createdAt;
 NSArray *parseSpot3;
@@ -26,7 +27,7 @@ NSArray *hadSession;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initController];
+    [self myCalView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,18 +35,19 @@ NSArray *hadSession;
     // Dispose of any resources that can be recreated.
 }
 
-- (void)initController {
+- (void)myCalView {
     thisYear = [[[NSCalendar currentCalendar] components:NSCalendarUnitYear fromDate:[NSDate date]]year];
     thisMonth = [[[NSCalendar currentCalendar] components:NSCalendarUnitMonth fromDate:[NSDate date]]month];
     [self moreDateInfo];
 }
 
--(IBAction)nextAct:(id)sender{
+- (IBAction)nextAct:(id)sender {
     thisMonth++;
     [self removeTags];
     [self updateCallNow];
 }
--(IBAction)prevAct:(id)sender{
+
+- (IBAction)prevAct:(id)sender {
     thisMonth--;
     [self removeTags];
     [self updateCallNow];
@@ -68,6 +70,7 @@ NSArray *hadSession;
         thisMonth = 12;
         thisYear--;
     }
+    [self moreDateInfo];
 }
 
 -(void) moreDateInfo{
@@ -125,5 +128,26 @@ NSArray *hadSession;
     NSUInteger numberOfDaysInMonth = rng.length;
     
     return numberOfDaysInMonth;
+}
+
+-(void) popInfo: (id) sender
+{
+    UIButton *btn = (UIButton*) sender;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    [components setDay:[btn.currentTitle integerValue]];
+    [components setMonth:thisMonth];
+    [components setYear:thisYear];
+    newDate = [calendar dateFromComponents:components];
+    [self performSegueWithIdentifier:@"Plan" sender:self];
+}
+
+/**********************************************************************************************/
+#pragma mark - Navigation
+/*******************************************************************************************/
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    Plan *plan = [segue destinationViewController];
+    plan.selectedDate = newDate;
 }
 @end
