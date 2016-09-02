@@ -17,4 +17,5 @@ extern NSArray *hadSession;
 - (IBAction)nextAct:(id)sender;
 - (IBAction)prevAct:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *lblMes;
+@property NSMutableArray *ids;
 @end

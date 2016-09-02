@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Calendario.h"
+
 #import "Start.h"
 
 @interface Requirements : UIViewController
 @property int row;
+@property NSMutableArray *items;
+@property NSMutableArray *ids;
+@property (weak, nonatomic) IBOutlet UIView *vwContent;
 - (IBAction)btnRight_Pressed:(id)sender;
+- (IBAction)btnLeft_Pressed:(id)sender;
 @end

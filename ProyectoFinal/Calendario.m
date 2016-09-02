@@ -17,7 +17,7 @@ NSUInteger weekday;
 int thisYear;
 int weekDay;
 int thisMonth;
-NSDate *newDate;
+NSDateFormatter *dateFormat;
 
 NSArray *createdAt;
 NSArray *parseSpot3;
@@ -138,7 +138,10 @@ NSArray *hadSession;
     [components setDay:[btn.currentTitle integerValue]];
     [components setMonth:thisMonth];
     [components setYear:thisYear];
-    newDate = [calendar dateFromComponents:components];
+    NSDate *newDate = [calendar dateFromComponents:components];
+    dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"dd-MMM-yyyy"];
+    parseSpot3 = @[@"p",[dateFormat stringFromDate:newDate]];
     [self performSegueWithIdentifier:@"Plan" sender:self];
 }
 
@@ -148,6 +151,7 @@ NSArray *hadSession;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     Plan *plan = [segue destinationViewController];
-    plan.selectedDate = newDate;
+    plan.selectedDate = parseSpot3[1];
+    plan.ids = self.ids;
 }
 @end

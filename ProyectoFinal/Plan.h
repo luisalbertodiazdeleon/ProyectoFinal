@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Declarations.h"
 
 @interface Plan : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *lblFechaValue;
 @property NSDate *selectedDate;
+@property NSMutableArray *ids;
+@property NSMutableArray *items;
+@property int day;
 @end
