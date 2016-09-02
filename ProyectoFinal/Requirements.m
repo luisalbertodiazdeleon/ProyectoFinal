@@ -8,6 +8,7 @@
 
 #import "Requirements.h"
 #import "Calendario.h"
+#import "Start.h"
 
 @interface Requirements ()
 
@@ -736,7 +737,10 @@
 }
 
 - (IBAction)btnLeft_Pressed:(id)sender {
-    [self performSegueWithIdentifier:@"Start" sender:self];
+    NSString *storyboardName = @"Main";
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:(storyboardName) bundle:nil];
+    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"Start"];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 @end
